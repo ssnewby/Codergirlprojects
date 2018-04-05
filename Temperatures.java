@@ -23,6 +23,7 @@ public class Temperatures {
                         sumTime[index] = sumTime[index] + temperatures[index][j];
                     }
                 }
+                /*
                 System.out.println("The average temperature for Sunday is " + sumDay[0]/4);
                 System.out.println("The average temperature for Monday is " + sumDay[1]/4);
                 System.out.println("The average temperature for Tuesday is " + sumDay[2]/4);
@@ -30,27 +31,42 @@ public class Temperatures {
                 System.out.println("The average temperature for Thursday is " + sumDay[4]/4);
                 System.out.println("The average temperature for Friday is " + sumDay[5]/4);
                 System.out.println("The average temperature for Saturday is " + sumDay[6]/4);
+                */
+
+                String days[] = new String[]{"Sun","Mon","Tue","Wed","Thu","Fri","Sat"};
+                for (int j = 0; j < 7; j++) {
+                    System.out.println (days[j] + ": " + sumDay[j]/4);
+                }
 
                 System.out.println("What is the average temperature for each time?");
+                /*
                 System.out.println("The average for 7:00AM is " + sumTime[0]/7);
                 System.out.println("The average for 3:00PM is " + sumTime[1]/7);
                 System.out.println("The average for 7:00PM is " + sumTime[2]/7);
                 System.out.println("The average for 3:00AM is " + sumTime[3]/7);
+                */
+
+                String time[] = new String[]{"7 AM","3 PM","7 PM","3 AM"};
+                for (int j = 0; j < 4; j++) {
+                    System.out.println (time[j] + ": " + sumTime[j]/7);
+                }
 
 
                 System.out.println("What is the final average temperature overall? ");
 
-                int Sunday = sumDay[0]/28;
-                int Monday = sumDay[1]/28;
-                int Tuesday = sumDay[2]/28;
-                int Wednesday = sumDay[3]/28;
-                int Thursday = sumDay[4]/28;
-                int Friday = sumDay[5]/28;
-                int Saturday = sumDay[6]/28;
+                int Sunday = sumDay[0];
+                int Monday = sumDay[1];
+                int Tuesday = sumDay[2];
+                int Wednesday = sumDay[3];
+                int Thursday = sumDay[4];
+                int Friday = sumDay[5];
+                int Saturday = sumDay[6];
 
 
-                int avgOverall = Sunday + Monday + Tuesday + Wednesday + Thursday + Friday + Saturday;
-                System.out.println("The final average temperature overall is " + avgOverall);
+                int sumOverall = Sunday + Monday + Tuesday + Wednesday + Thursday + Friday + Saturday;
+                System.out.println("Overall: " + sumOverall/28);
+
+
 
 
 
